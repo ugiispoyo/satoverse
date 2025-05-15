@@ -1,17 +1,17 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0d0d0d;
+  --background: url("/images/bg.svg");
   --foreground: #171717;
 
-  --C_D4CA99: #d4ca99;
-  --C_00FFFF: #00ffff;
-  --C_1C1C1C: #1c1c1c;
-  --C_9A65C4: #9a65c4;
-  --C_C0C0C0: #c0c0c0;
-  --C_B1F489: #b1f489;
-  --C_EB574C: #eb574c;
-  --C_EBB4B8: #ebb4b8;
+  --color-sandyellow: "#d4ca99";
+  --color-cyanbright: "#00ffff";
+  --color-darkcharcoal: "#1c1c1c";
+  --color-purplevibe: "#9a65c4";
+  --color-lightgray: "#c0c0c0";
+  --color-greenpastel: "#b1f489";
+  --color-redfiery: "#eb574c";
+  --color-pinksoft: "#ebb4b8";
 }
 
 @font-face {
@@ -35,7 +35,7 @@
   src: url("/fonts/Usuzi/usuzi.ttf") format("opentype");
 }
 
-@theme inline {
+@theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
 
@@ -44,15 +44,6 @@
   --font-joystix: joystix;
   --font-strenuoes: strenuoes;
   --font-usuzi: usuzi;
-
-  --color-D4CA99: var(--C_D4CA99);
-  --color-00FFFF: var(--C_00FFFF);
-  --color-1C1C1C: var(--C_1C1C1C);
-  --color-9A65C4: var(--C_9A65C4);
-  --color-C0C0C0: var(--C_C0C0C0);
-  --color-B1F489: var(--C_B1F489);
-  --color-EB574C: var(--C_EB574C);
-  --color-EBB4B8: var(--C_EBB4B8);
 }
 
 @media (prefers-color-scheme: dark) {

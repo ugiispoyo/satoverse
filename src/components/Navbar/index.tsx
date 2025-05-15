@@ -1,7 +1,87 @@
+"use client";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import React, { JSX } from "react";
+
+import { menu } from "@/constants";
 
 type Props = {};
 
 export default function Navbar(props: Props): JSX.Element {
-  return <div>Navbar</div>;
+  const pathname = usePathname();
+
+  const checkIsActive = (path: string) => {
+    if (path === "home") {
+      return pathname === "/";
+    }
+    return pathname.includes(path);
+  };
+
+  return (
+    <div className="w-full flex max-w-[1280px] mx-auto items-center mt-4">
+      <img src="/images/logo.png" alt="logo" className="w-1/6 h-auto" />
+      <ul className="w-full flex justify-between ml-3 gap-4">
+        {menu.map((item, index) => {
+          return (
+            <li key={index}>
+              <Link href={`/${item === "home" ? "" : item}`}>
+                <img
+                  src={`/images/navbar/${item}.svg`}
+                  alt={item}
+                  className={`w-auto h-[35px] hover:cursor-pointer ${
+                    checkIsActive(item) && item !== "whitepaper" ? "hidden" : ""
+                  }`}
+                />
+                <img
+                  src={`/images/navbar/${item}-active.svg`}
+                  alt={item}
+                  className={`w-auto h-[40px] hover:cursor-pointer ${
+                    !checkIsActive(item) || item === "whitepaper"
+                      ? "hidden"
+                      : ""
+                  }`}
+                />
+              </Link>
+            </li>
+          );
+        })}
+        {/* <li>
+          <Link href={"/"}>
+            <img
+              src="/images/navbar/home.svg"
+              alt="home"
+              className="w-auto h-[35px] hover:cursor-pointer"
+            />
+          </Link>
+        </li>
+        <li>
+          <Link href={"/tokenomics"}>
+            <img
+              src="/images/navbar/tokenomics.svg"
+              alt="home"
+              className="w-auto h-[35px] hover:cursor-pointer"
+            />
+          </Link>
+        </li>
+        <li>
+          <Link href={"/roadmap"}>
+            <img
+              src="/images/navbar/roadmap.svg"
+              alt="home"
+              className="w-auto h-[35px] hover:cursor-pointer"
+            />
+          </Link>
+        </li>
+        <li>
+          <Link href={"/whitepaper"}>
+            <img
+              src="/images/navbar/whitepaper.svg"
+              alt="home"
+              className="w-auto h-[35px] hover:cursor-pointer"
+            />
+          </Link>
+        </li> */}
+      </ul>
+    </div>
+  );
 }
