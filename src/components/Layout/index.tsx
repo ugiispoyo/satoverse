@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import React, { JSX } from "react";
 
 import Navbar from "../Navbar";
@@ -17,6 +17,11 @@ export default function Layout(props: Props): JSX.Element {
       />
       <Navbar />
       {props.children}
+      <img
+        src={"/images/border-right-bottom.svg"}
+        alt="border-bottom"
+        className="w-auto h-[329px] absolute bottom-0 right-0"
+      />
     </div>
   );
 }
