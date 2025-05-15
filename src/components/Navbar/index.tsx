@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import React, { JSX } from "react";
 
 import { menu } from "@/constants";
@@ -9,6 +9,7 @@ type Props = {};
 
 export default function Navbar(props: Props): JSX.Element {
   const pathname = usePathname();
+  const router = useRouter();
 
   const checkIsActive = (path: string) => {
     if (path === "home") {
@@ -19,7 +20,12 @@ export default function Navbar(props: Props): JSX.Element {
 
   return (
     <div className="w-full flex max-w-[1280px] mx-auto items-center mt-4">
-      <img src="/images/logo.png" alt="logo" className="w-1/6 h-auto" />
+      <img
+        src="/images/logo.png"
+        onClick={() => router.push("/")}
+        alt="logo"
+        className="w-1/6 h-auto"
+      />
       <ul className="w-full flex justify-between ml-3 gap-4">
         {menu.map((item, index) => {
           return (

@@ -1,5 +1,5 @@
 export const menu = [
-  "home",
+  "howtobuy",
   "tokenomics",
   "roadmap",
   "whitepaper",
