@@ -3,8 +3,8 @@ import React from "react";
 
 import Components from "./components";
 
-const Homeontainer = () => {
+const HowToBuyContainer = () => {
   return <Components />;
 };
 
-export default Homeontainer;
+export default HowToBuyContainer;
