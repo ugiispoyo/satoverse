@@ -1,20 +1,63 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #0d0d0d;
   --foreground: #171717;
+
+  --C_D4CA99: #d4ca99;
+  --C_00FFFF: #00ffff;
+  --C_1C1C1C: #1c1c1c;
+  --C_9A65C4: #9a65c4;
+  --C_C0C0C0: #c0c0c0;
+  --C_B1F489: #b1f489;
+  --C_EB574C: #eb574c;
+  --C_EBB4B8: #ebb4b8;
+}
+
+@font-face {
+  font-family: "joystix";
+  font-style: normal;
+  font-display: swap;
+  src: url("/fonts/Joystix/joystix.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "strenuoes";
+  font-style: normal;
+  font-display: swap;
+  src: url("/fonts/Strenuoes/strenuous.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "usuzi";
+  font-style: normal;
+  font-display: swap;
+  src: url("/fonts/Usuzi/usuzi.ttf") format("opentype");
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+  --font-orbitron: var(--font-orbitron);
+  --font-azeret_mono: var(--font-azeret_mono);
+  --font-joystix: joystix;
+  --font-strenuoes: strenuoes;
+  --font-usuzi: usuzi;
+
+  --color-D4CA99: var(--C_D4CA99);
+  --color-00FFFF: var(--C_00FFFF);
+  --color-1C1C1C: var(--C_1C1C1C);
+  --color-9A65C4: var(--C_9A65C4);
+  --color-C0C0C0: var(--C_C0C0C0);
+  --color-B1F489: var(--C_B1F489);
+  --color-EB574C: var(--C_EB574C);
+  --color-EBB4B8: var(--C_EBB4B8);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #0d0d0d;
     --foreground: #ededed;
   }
 }
