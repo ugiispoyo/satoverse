@@ -9,7 +9,7 @@ type Props = {
 
 export default function Layout(props: Props): JSX.Element {
   return (
-    <div className="w-full">
+    <div className="w-full h-[900px] relative">
       <img
         src={"/images/border-top.svg"}
         alt="border-top"
