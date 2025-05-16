@@ -3,7 +3,7 @@ import React from "react";
 const redImg = "/images/sidebar-reward/line-red.svg";
 const whiteImg = "/images/sidebar-reward/line-white.svg";
 
-export default function ProgressBlocks({
+export default function ProgressBlock({
   progressPercent,
 }: {
   progressPercent: number;

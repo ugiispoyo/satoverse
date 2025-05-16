@@ -109,3 +109,13 @@ body {
   text-fill-color: transparent;
   user-select: none;
 }
+
+.text-gradient-6 {
+  background: linear-gradient(180deg, #f4c46a 0%, #8e723e 100%),
+    linear-gradient(0deg, #aa9f65 0%, #e3daac 100%);
+  background-blend-mode: multiply;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* fallback */
+  text-fill-color: transparent; /* fallback */
+}
