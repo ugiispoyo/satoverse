@@ -58,3 +58,54 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.text-gradient-1 {
+  background: linear-gradient(0deg, #b1f489, #b1f489),
+    linear-gradient(180deg, #f4c46a 0%, #8e723e 100%),
+    linear-gradient(0deg, #aa9f65 0%, #e3daac 100%);
+  background-blend-mode: multiply;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* fallback */
+  text-fill-color: transparent; /* fallback */
+}
+
+.text-gradient-2 {
+  background: linear-gradient(
+    188.47deg,
+    rgba(177, 244, 137, 0.48) 18.62%,
+    #b1f489 53.74%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  user-select: none;
+}
+
+.text-gradient-3 {
+  background: linear-gradient(180deg, #f95d51 16%, #8b2f28 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  user-select: none;
+}
+
+.text-gradient-4 {
+  background: linear-gradient(180deg, #c0c0c0 24.97%, #5a5a5a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  user-select: none;
+}
+
+.text-gradient-5 {
+  background: linear-gradient(180deg, #ffffff 41.83%, #5a5a5a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  user-select: none;
+}
