@@ -51,42 +51,6 @@ export default function Navbar(props: Props): JSX.Element {
             </li>
           );
         })}
-        {/* <li>
-          <Link href={"/"}>
-            <img
-              src="/images/navbar/home.svg"
-              alt="home"
-              className="w-auto h-[35px] hover:cursor-pointer"
-            />
-          </Link>
-        </li>
-        <li>
-          <Link href={"/tokenomics"}>
-            <img
-              src="/images/navbar/tokenomics.svg"
-              alt="home"
-              className="w-auto h-[35px] hover:cursor-pointer"
-            />
-          </Link>
-        </li>
-        <li>
-          <Link href={"/roadmap"}>
-            <img
-              src="/images/navbar/roadmap.svg"
-              alt="home"
-              className="w-auto h-[35px] hover:cursor-pointer"
-            />
-          </Link>
-        </li>
-        <li>
-          <Link href={"/whitepaper"}>
-            <img
-              src="/images/navbar/whitepaper.svg"
-              alt="home"
-              className="w-auto h-[35px] hover:cursor-pointer"
-            />
-          </Link>
-        </li> */}
       </ul>
     </div>
   );

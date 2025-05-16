@@ -1,0 +1,52 @@
+<svg width="255" height="40" viewBox="0 0 255 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <mask id="mask0_0_1" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="6" y="12" width="24" height="8">
+        <path d="M6.66797 12.6303H29.3346V20.0001H6.66797V12.6303Z" fill="white" />
+    </mask>
+    <g mask="url(#mask0_0_1)">
+        <path d="M7.84375 12.8699L14.6302 19.6564H28.9427L22.1562 12.8699H7.84375Z" fill="#B1F489" />
+    </g>
+    <mask id="mask1_0_1" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="6" width="42" height="14">
+        <path d="M0 6.00009H41.3333V20.0001H0V6.00009Z" fill="white" />
+    </mask>
+    <g mask="url(#mask1_0_1)">
+        <path
+            d="M1.10938 6.02613L6.33854 11.2553C8.32813 11.2501 17.0156 11.2397 23.6875 11.2397L32.0833 19.6407H40.5573L26.9427 6.02613C26.526 6.00009 1.10938 6.02613 1.10938 6.02613ZM25.8542 8.79176C25.4844 8.79176 25.1823 8.49488 25.1823 8.11988C25.1823 7.75009 25.4844 7.45321 25.8542 7.45321C26.224 7.45321 26.526 7.75009 26.526 8.11988C26.526 8.49488 26.224 8.79176 25.8542 8.79176Z"
+            fill="#B1F489" />
+    </g>
+    <mask id="mask2_0_1" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="29" y="6" width="21" height="14">
+        <path d="M29.3359 6.00009H49.3359V20.0001H29.3359V6.00009Z" fill="white" />
+    </mask>
+    <g mask="url(#mask2_0_1)">
+        <path d="M30.8281 6.00009L44.25 19.4272H49.0625L35.6354 6.00009H30.8281Z" fill="#B1F489" />
+    </g>
+    <g filter="url(#filter0_ddi_0_1)">
+        <path
+            d="M38.8242 6.00002L52.2513 19.4271L241.5 19.4271L228.5 6L38.8242 6.00002ZM237.885 11.0313C237.083 11.0313 236.432 10.3802 236.432 9.57813C236.432 8.77604 237.083 8.125 237.885 8.125C238.687 8.125 239.339 8.77604 239.339 9.57813C239.339 10.3802 238.687 11.0313 237.885 11.0313Z"
+            fill="#B1F489" />
+    </g>
+    <defs>
+        <filter id="filter0_ddi_0_1" x="25.8242" y="0" width="228.676" height="39.4271" filterUnits="userSpaceOnUse"
+            color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                result="hardAlpha" />
+            <feOffset dy="7" />
+            <feGaussianBlur stdDeviation="6.5" />
+            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.3 0" />
+            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_0_1" />
+            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                result="hardAlpha" />
+            <feOffset dy="2" />
+            <feGaussianBlur stdDeviation="2" />
+            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.4 0" />
+            <feBlend mode="normal" in2="effect1_dropShadow_0_1" result="effect2_dropShadow_0_1" />
+            <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_0_1" result="shape" />
+            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                result="hardAlpha" />
+            <feOffset dy="-3" />
+            <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0" />
+            <feBlend mode="normal" in2="shape" result="effect3_innerShadow_0_1" />
+        </filter>
+    </defs>
+</svg>
