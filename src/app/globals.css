@@ -119,3 +119,13 @@ body {
   background-clip: text; /* fallback */
   text-fill-color: transparent; /* fallback */
 }
+
+.text-gradient-7 {
+  background: linear-gradient(0deg, #ffffff, #ffffff),
+    linear-gradient(0deg, #b1f489, #b1f489);
+  background-blend-mode: multiply;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* fallback */
+  text-fill-color: transparent; /* fallback */
+}
