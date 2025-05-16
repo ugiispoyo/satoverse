@@ -44,6 +44,9 @@
   --font-joystix: joystix;
   --font-strenuoes: strenuoes;
   --font-usuzi: usuzi;
+
+  --text-shadow-white: 0px 0px 8.9px 0px rgba(0, 0, 0, 1);
+
 }
 
 @media (prefers-color-scheme: dark) {
