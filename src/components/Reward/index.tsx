@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Link from "next/link";
 
@@ -124,13 +125,13 @@ const Reward = (props: Props) => {
             </p>
             <p className="text-[10px] font-orbitron text-[#E3DAAC] flex justify-center gap-2 w-full uppercase font-extrabold">
               <img src="/images/right.svg" alt="right" className="mr-1" />
-              <div className="flex">
+              <span className="flex">
                 1 SOLX =
                 <span className="flex">
                   <span className="text-gradient-3">$6,570.04</span>
                   <img src="/icons/help-circle.svg" alt="help" />
                 </span>
-              </div>
+              </span>
               <img src="/images/left.svg" alt="left" />
             </p>
             <div className="flex w-full mt-4 gap-1">
