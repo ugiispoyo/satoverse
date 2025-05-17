@@ -9,15 +9,15 @@ type Props = {
   children: React.ReactNode;
 };
 export default function Layout(props: Props): JSX.Element {
-  const tickerRef = useRef<HTMLUListElement>(null);
+  const borderRef = useRef<HTMLUListElement>(null);
   const [renderedItems, setRenderedItems] = useState(borderTop);
 
   useEffect(() => {
-    const updateTicker = () => {
-      if (tickerRef.current) {
-        const tickerWidth = tickerRef.current.scrollWidth;
+    const updateborder = () => {
+      if (borderRef.current) {
+        const borderWidth = borderRef.current.scrollWidth;
         const windowWidth = window.innerWidth;
-        const repeatCount = Math.ceil((windowWidth * 2) / tickerWidth);
+        const repeatCount = Math.ceil((windowWidth * 2) / borderWidth);
 
         const fullList: typeof borderTop = [];
         for (let i = 0; i < repeatCount; i++) {
@@ -28,10 +28,11 @@ export default function Layout(props: Props): JSX.Element {
       }
     };
 
-    updateTicker();
-    window.addEventListener("resize", updateTicker);
-    return () => window.removeEventListener("resize", updateTicker);
+    updateborder();
+    window.addEventListener("resize", updateborder);
+    return () => window.removeEventListener("resize", updateborder);
   }, []);
+
   function DynamicWidthContent({ text, img }: { text: string; img: string }) {
     const textRef = useRef<HTMLSpanElement>(null);
     const [width, setWidth] = useState(100);
@@ -67,7 +68,7 @@ export default function Layout(props: Props): JSX.Element {
     <div className="w-full min-h-[100vh] relative">
       <div className="w-full overflow-hidden max-h-[40px] relative top-[-10px]">
         <ul
-          ref={tickerRef}
+          ref={borderRef}
           className="flex w-max animate-marquee whitespace-nowrap"
         >
           {renderedItems.map((item, index) => (
