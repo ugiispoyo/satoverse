@@ -13,7 +13,7 @@ const Error = ({
     <div className="flex justify-center items-center flex-col max-w-[900px] mx-auto">
       <h1
         className={clsx(
-          "text-lg text-[#ebb4b8]",
+          "text-2xl text-[#B1F489]",
           description ? "mt-10 mb-4" : "my-7"
         )}
       >
