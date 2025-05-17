@@ -9,6 +9,9 @@ const Components = () => {
       <div className="flex w-full items-center">
         <div className="w-full max-w-[690px] flex flex-col gap-4">
           <div className="w-full bg-[url('/images/tokenomics/bg-content.svg')] min-h-[489px] relative px-4 flex font-orbitron">
+            <h1 className="font-joystix text-[29px] text-[#B1F489] mt-8 ml-8">
+              TOkenomics
+            </h1>
             <div className="w-full top-[55px] left-[45%] absolute uppercase font-extrabold">
               <h3 className="text-[#B1F489] text-base text-shadow-white">
                 15% — Marketing Fund
