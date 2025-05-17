@@ -19,7 +19,7 @@ export default function Navbar(props: Props): JSX.Element {
   };
 
   return (
-    <div className="w-full flex max-w-[1280px] mx-auto items-center mt-4">
+    <div className="w-full flex max-w-[1280px] mx-auto items-center">
       <img
         src="/images/logo.png"
         onClick={() => router.push("/")}

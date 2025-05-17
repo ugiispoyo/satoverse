@@ -1,5 +1,5 @@
 "use client";
-import React, { JSX } from "react";
+import React, { JSX, useRef, useEffect, useState } from "react";
 
 import Navbar from "../Navbar";
 
@@ -8,44 +8,77 @@ import { borderTop } from "@/constants";
 type Props = {
   children: React.ReactNode;
 };
-
 export default function Layout(props: Props): JSX.Element {
+  const tickerRef = useRef<HTMLUListElement>(null);
+  const [renderedItems, setRenderedItems] = useState(borderTop);
+
+  useEffect(() => {
+    const updateTicker = () => {
+      if (tickerRef.current) {
+        const tickerWidth = tickerRef.current.scrollWidth;
+        const windowWidth = window.innerWidth;
+        const repeatCount = Math.ceil((windowWidth * 2) / tickerWidth);
+
+        const fullList: typeof borderTop = [];
+        for (let i = 0; i < repeatCount; i++) {
+          fullList.push(...borderTop);
+        }
+
+        setRenderedItems(fullList);
+      }
+    };
+
+    updateTicker();
+    window.addEventListener("resize", updateTicker);
+    return () => window.removeEventListener("resize", updateTicker);
+  }, []);
   function DynamicWidthContent({ text, img }: { text: string; img: string }) {
-    const wordCount = text.length;
+    const textRef = useRef<HTMLSpanElement>(null);
+    const [width, setWidth] = useState(100);
 
-    let width = wordCount;
-
-    if (width < 100) width = 100;
+    useEffect(() => {
+      if (textRef.current) {
+        const measured = textRef.current.scrollWidth;
+        setWidth(measured + 70);
+      }
+    }, [text]);
 
     return (
       <li
-        style={{
-          width: `${width}px`,
-        }}
-        className="flex items-center justify-center flex-1 relative h-[14px] overflow-hidden"
+        style={{ width: `${width}px`, height: "40px" }}
+        className="relative flex items-center justify-center"
       >
         <img
           src={`/images/border-top/${img}.svg`}
           alt="border-top"
-          className="w-full z-[5] absolute top-0"
+          className="absolute top-0 left-0 w-full h-full object-fill z-[5]"
         />
-        <span className="text-[8px] font-usuzi text-[#0D0D0D] z-[6] bottom-1 pt-[4px]">
+        <span
+          ref={textRef}
+          className="relative z-[6] text-[7px] pb-[10px] font-usuzi text-[#0D0D0D] leading-[1] pl-[10px] pr-[2px]"
+        >
           {text}
         </span>
       </li>
     );
   }
+
   return (
-    <div className="w-full h-[900px] relative">
-      <ul className="w-full flex max-h-[40px] overflow-y-hidden mb-8">
-        {borderTop.map((item, index) => (
-          <React.Fragment key={index}>
-            <DynamicWidthContent text={item.label} img={item.img} />
-          </React.Fragment>
-        ))}
-      </ul>
+    <div className="w-full min-h-[100vh] relative">
+      <div className="w-full overflow-hidden max-h-[40px] relative top-[-10px]">
+        <ul
+          ref={tickerRef}
+          className="flex w-max animate-marquee whitespace-nowrap"
+        >
+          {renderedItems.map((item, index) => (
+            <DynamicWidthContent key={index} text={item.label} img={item.img} />
+          ))}
+        </ul>
+      </div>
+
       <Navbar />
       {props.children}
+
       <img
         src={"/images/border-right-bottom.svg"}
         alt="border-bottom"

@@ -46,7 +46,6 @@
   --font-usuzi: usuzi;
 
   --text-shadow-white: 0px 0px 8.9px 0px rgba(0, 0, 0, 1);
-
 }
 
 @media (prefers-color-scheme: dark) {
@@ -131,4 +130,19 @@ body {
   -webkit-text-fill-color: transparent;
   background-clip: text; /* fallback */
   text-fill-color: transparent; /* fallback */
+}
+
+@layer utilities {
+  @keyframes marquee {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-marquee {
+    animation: marquee 30s linear infinite;
+  }
 }

@@ -5,7 +5,7 @@ import WhatIs from "./what-is";
 
 const Components = () => {
   return (
-    <div className="w-full max-w-[1126px] mx-auto mt-5">
+    <div className="w-full max-w-[1126px] mx-auto mt-5 pb-8">
       <div className="flex w-full">
         <div className="w-full max-w-[690px] flex flex-col gap-4">
           <img
