@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import clsx from "clsx";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 import Reward from "@/components/Reward";
 
