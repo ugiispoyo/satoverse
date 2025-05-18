@@ -50,7 +50,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0d0d0d;
+    --background: url("/images/bg.svg");
     --foreground: #ededed;
   }
 }
