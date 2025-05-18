@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import clsx from "clsx";
+import { motion, AnimatePresence } from "framer-motion";
 
 import Reward from "@/components/Reward";
 
@@ -37,7 +38,17 @@ const Components = () => {
                   How do I participate in the presale?
                 </h3>
                 {open && (
-                  <div className="w-full font-usuzi text-[8px] text-[#D4CA99] mt-8 flex gap-1 flex-col">
+                  <motion.div
+                    key="faq-content"
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: "auto" }}
+                    exit={{ opacity: 0, height: 0 }}
+                    transition={{
+                      duration: open ? 0.3 : 0.5,
+                      ease: "easeInOut",
+                    }}
+                    className="w-full font-usuzi text-[8px] text-[#D4CA99] mt-8 flex gap-1 flex-col overflow-hidden"
+                  >
                     <p>
                       To participate in the{" "}
                       <span className="text-[#B1F489]">Satoverse</span> presale,
@@ -64,7 +75,7 @@ const Components = () => {
                       Make sure to act fast — the earlier you buy, the lower the
                       price and the higher the staking rewards you'll receive!
                     </p>
-                  </div>
+                  </motion.div>
                 )}
               </div>
             </div>
