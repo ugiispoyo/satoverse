@@ -132,6 +132,25 @@ body {
   text-fill-color: transparent; /* fallback */
 }
 
+.text-gradient-8 {
+  background: linear-gradient(0deg, #ffffff, #ffffff),
+    linear-gradient(99.48deg, rgba(177, 244, 137, 0.48) 0.84%, #b1f489 73.69%);
+  background-blend-mode: multiply;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* fallback */
+  text-fill-color: transparent; /* fallback */
+}
+
+.text-gradient-9 {
+  background: linear-gradient(180deg, #ffffff 0%, #cdcdcd 100%);
+  background-blend-mode: multiply;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* fallback */
+  text-fill-color: transparent; /* fallback */
+}
+
 @layer utilities {
   @keyframes marquee {
     0% {
@@ -145,4 +164,62 @@ body {
   .animate-marquee {
     animation: marquee 30s linear infinite;
   }
+}
+
+.bg-btn-best-wallet {
+  background: linear-gradient(
+      180deg,
+      #aa9f65 0%,
+      #706842 3.19%,
+      #706842 97.43%,
+      #aa9f65 100%
+    ),
+    linear-gradient(0deg, #e3daac, #e3daac);
+  width: "100%";
+  min-width: 380px;
+  height: 56.5;
+  border-top-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+  border-width: 0.43px;
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  cursor: pointer;
+  box-shadow: 0px 0px 0px 0.86px #212121;
+  box-shadow: 0px 0px 8px 0px #bffd9c7a;
+}
+
+.bg-btn-other-connect-wallet {
+  background: linear-gradient(
+      180deg,
+      #244a32 0%,
+      #172f21 3.19%,
+      #20442f 97.43%,
+      #244a32 100%
+    ),
+    linear-gradient(0deg, #bffd9c, #bffd9c);
+  width: "100%";
+  min-width: 380px;
+  height: 56.5;
+  border-top-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+  border-width: 0.43px;
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  cursor: pointer;
+  box-shadow: 0px 0px 0px 0.86px #212121;
+  box-shadow: 0px 0px 8px 0px #bffd9c7a;
+}
+
+.bg-btn-buy-with-solana {
+  background: 0.43px solid;
+  background: linear-gradient(266.92deg, #00ffa3 0.43%, #dc1fff 100.7%);
+  box-shadow: 0px 0px 0px 0.86px #212121;
+  box-shadow: 1px -1px 8px 0px #00ffa3;
+  box-shadow: -1px 1px 8px 0px #dc1fff;
 }
