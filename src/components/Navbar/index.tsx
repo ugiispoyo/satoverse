@@ -41,7 +41,7 @@ export default function Navbar(props: Props): JSX.Element {
       {/* Desktop Menu */}
       <ul className="hidden lg:flex w-full justify-end ml-3 gap-4">
         {menu.map((item, index) => {
-          const isActive = checkIsActive(item.label);
+          const isActive = checkIsActive(item.pathname);
           const isWhitepaper = item.pathname === "whitepaper";
 
           return (
