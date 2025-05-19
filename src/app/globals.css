@@ -181,8 +181,7 @@ body {
       #aa9f65 100%
     ),
     linear-gradient(0deg, #e3daac, #e3daac);
-  width: "100%";
-  min-width: 380px;
+  max-width: 380px;
   height: 56.5;
   border-top-left-radius: 6px;
   border-bottom-right-radius: 6px;
@@ -206,8 +205,7 @@ body {
       #244a32 100%
     ),
     linear-gradient(0deg, #bffd9c, #bffd9c);
-  width: "100%";
-  min-width: 380px;
+  max-width: 380px;
   height: 56.5;
   border-top-left-radius: 6px;
   border-bottom-right-radius: 6px;
