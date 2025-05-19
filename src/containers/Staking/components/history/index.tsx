@@ -11,13 +11,13 @@ const History = (props: Props) => {
         alt="reward"
         className="max-w-[132px] w-full"
       />
-      <h1 className="text-[29px] font-joystix text-gradient-7 uppercase">
+      <h1 className="text-[29px] font-joystix text-gradient-7 uppercase max-md:text-center">
         Reward history
       </h1>
       <h2 className="text-[12px] font-extrabold font-orbitron text-[#E3DAAC] uppercase">
         Track your stacking rewards
       </h2>
-      <div className="w-full flex gap-3 mt-5 mb-4">
+      <div className="w-full flex gap-3 mt-5 mb-4 max-md:flex-col max-md:items-center">
         <div className="w-full font-orbitron max-w-[200px] bg-[url('/images/staking/bg-balence.svg')] bg-no-repeat bg-contain min-h-[102px] flex flex-col pl-7 pr-5 py-4 gap-1">
           <h3 className="text-[12px] text-[#E3DAAC] font-extrabold">
             stETH balance
@@ -64,158 +64,160 @@ const History = (props: Props) => {
         </div>
       </div>
 
-      <div className="w-full max-w-[540px] mx-auto flex flex-col justify-start items-start bg-[url('/images/staking/bg-table.svg')] bg-no-repeat bg-contain h-full min-h-[297px] py-3 px-5">
-        <div className="w-full flex items-center">
-          <img src="/icons/vip.svg" alt="vip" className="w-[11px] mr-2" />
-          <h2 className="text-gradient-7 text-[20px] font-usuzi block w-full">
-            Reward History
-          </h2>
-          <div className="w-full flex ml-[10px]">
-            <img
-              src="/icons/checkbox.svg"
-              alt="checkbox"
-              className="w-[9px] mr-1"
-            />
-            <span className="text-white font-orbitron text-[8px]">
-              Historical stETH price
-            </span>
+      <div className="w-full max-w-[540px] overflow-scroll">
+        <div className="w-[540px] mx-auto flex flex-col justify-start items-start bg-[url('/images/staking/bg-table.svg')] bg-no-repeat bg-contain h-full min-h-[297px] py-3 px-5">
+          <div className="w-full flex items-center">
+            <img src="/icons/vip.svg" alt="vip" className="w-[11px] mr-2" />
+            <h2 className="text-gradient-7 text-[20px] font-usuzi block w-full">
+              Reward History
+            </h2>
+            <div className="w-full flex ml-[10px]">
+              <img
+                src="/icons/checkbox.svg"
+                alt="checkbox"
+                className="w-[9px] mr-1"
+              />
+              <span className="text-white font-orbitron text-[8px]">
+                Historical stETH price
+              </span>
+            </div>
           </div>
-        </div>
-        <div className="w-full px-2">
-          <table className="w-full text-left border-separate border-spacing-0">
-            <thead>
-              <tr className="font-orbitron text-[8px] font-extrabold text-white">
-                <th className="text-left py-2 border-y border-[#e3daac1e]">
-                  Date
-                </th>
-                <th className="text-left py-2 border-y border-[#e3daac1e]">
-                  Type
-                </th>
-                <th className="text-left py-2 border-y border-[#e3daac1e]">
-                  Ξ Change
-                </th>
-                <th className="text-left py-2 border-y border-[#e3daac1e]">
-                  $ Change
-                </th>
-                <th className="text-left py-2 border-y border-[#e3daac1e]">
-                  APR
-                </th>
-                <th className="text-left py-2 border-y border-[#e3daac1e]">
-                  Balance
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr className="text-[8px] font-azeret_mono">
-                <td className="py-2 text-[#E3DAAC] border-b border-[#e3daac1e]">
-                  04.10.2021
-                </td>
-                <td className="py-2 text-[#E3DAAC] border-b border-[#e3daac1e]">
-                  <span className="flex items-center">
-                    <img
-                      src="/icons/vip-line.svg"
-                      alt="vip"
-                      className="w-[9px] mr-1"
-                    />
-                    Reward
-                  </span>
-                </td>
-                <td className="py-2 text-[#B1F489] border-b border-[#e3daac1e]">
-                  Ξ 0.00631393
-                </td>
-                <td className="py-2 text-[#B1F489] border-b border-[#e3daac1e]">
-                  $21.00
-                </td>
-                <td className="py-2 text-[#E3DAAC] border-b border-[#e3daac1e]">
-                  5%
-                </td>
-                <td className="py-2 text-[#E3DAAC] border-b border-[#e3daac1e]">
-                  45.97220305
-                </td>
-              </tr>
-              <tr className="text-[8px] font-azeret_mono">
-                <td className="py-2 text-[#E3DAAC] border-b border-[#e3daac1e]">
-                  04.10.2021
-                </td>
-                <td className="py-2 text-[#E3DAAC] border-b border-[#e3daac1e]">
-                  <span className="flex items-center">
-                    <img
-                      src="/icons/vip-line.svg"
-                      alt="vip"
-                      className="w-[9px] mr-1"
-                    />
-                    Reward
-                  </span>
-                </td>
-                <td className="py-2 text-[#B1F489] border-b border-[#e3daac1e]">
-                  Ξ 0.00631393
-                </td>
-                <td className="py-2 text-[#B1F489] border-b border-[#e3daac1e]">
-                  $21.00
-                </td>
-                <td className="py-2 text-[#E3DAAC] border-b border-[#e3daac1e]">
-                  5%
-                </td>
-                <td className="py-2 text-[#E3DAAC] border-b border-[#e3daac1e]">
-                  45.97220305
-                </td>
-              </tr>
-              <tr className="text-[8px] font-azeret_mono">
-                <td className="py-2 text-[#E3DAAC] border-b border-[#e3daac1e]">
-                  04.10.2021
-                </td>
-                <td className="py-2 text-[#E3DAAC] border-b border-[#e3daac1e]">
-                  <span className="flex items-center">
-                    <img
-                      src="/icons/vip-line.svg"
-                      alt="vip"
-                      className="w-[9px] mr-1"
-                    />
-                    Reward
-                  </span>
-                </td>
-                <td className="py-2 text-[#B1F489] border-b border-[#e3daac1e]">
-                  Ξ 0.00631393
-                </td>
-                <td className="py-2 text-[#B1F489] border-b border-[#e3daac1e]">
-                  $21.00
-                </td>
-                <td className="py-2 text-[#E3DAAC] border-b border-[#e3daac1e]">
-                  5%
-                </td>
-                <td className="py-2 text-[#E3DAAC] border-b border-[#e3daac1e]">
-                  45.97220305
-                </td>
-              </tr>
-              <tr className="text-[8px] font-azeret_mono">
-                <td className="py-2 text-[#E3DAAC] border-b border-[#e3daac1e]">
-                  04.10.2021
-                </td>
-                <td className="py-2 text-[#E3DAAC] border-b border-[#e3daac1e]">
-                  <span className="flex items-center">
-                    <img
-                      src="/icons/vip-line.svg"
-                      alt="vip"
-                      className="w-[9px] mr-1"
-                    />
-                    Reward
-                  </span>
-                </td>
-                <td className="py-2 text-[#B1F489] border-b border-[#e3daac1e]">
-                  Ξ 0.00631393
-                </td>
-                <td className="py-2 text-[#B1F489] border-b border-[#e3daac1e]">
-                  $21.00
-                </td>
-                <td className="py-2 text-[#E3DAAC] border-b border-[#e3daac1e]">
-                  5%
-                </td>
-                <td className="py-2 text-[#E3DAAC] border-b border-[#e3daac1e]">
-                  45.97220305
-                </td>
-              </tr>
-            </tbody>
-          </table>
+          <div className="w-full px-2">
+            <table className="w-full text-left border-separate border-spacing-0">
+              <thead>
+                <tr className="font-orbitron text-[8px] font-extrabold text-white">
+                  <th className="text-left py-2 border-y border-[#e3daac1e]">
+                    Date
+                  </th>
+                  <th className="text-left py-2 border-y border-[#e3daac1e]">
+                    Type
+                  </th>
+                  <th className="text-left py-2 border-y border-[#e3daac1e]">
+                    Ξ Change
+                  </th>
+                  <th className="text-left py-2 border-y border-[#e3daac1e]">
+                    $ Change
+                  </th>
+                  <th className="text-left py-2 border-y border-[#e3daac1e]">
+                    APR
+                  </th>
+                  <th className="text-left py-2 border-y border-[#e3daac1e]">
+                    Balance
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="text-[8px] font-azeret_mono">
+                  <td className="py-2 text-[#E3DAAC] border-b border-[#e3daac1e]">
+                    04.10.2021
+                  </td>
+                  <td className="py-2 text-[#E3DAAC] border-b border-[#e3daac1e]">
+                    <span className="flex items-center">
+                      <img
+                        src="/icons/vip-line.svg"
+                        alt="vip"
+                        className="w-[9px] mr-1"
+                      />
+                      Reward
+                    </span>
+                  </td>
+                  <td className="py-2 text-[#B1F489] border-b border-[#e3daac1e]">
+                    Ξ 0.00631393
+                  </td>
+                  <td className="py-2 text-[#B1F489] border-b border-[#e3daac1e]">
+                    $21.00
+                  </td>
+                  <td className="py-2 text-[#E3DAAC] border-b border-[#e3daac1e]">
+                    5%
+                  </td>
+                  <td className="py-2 text-[#E3DAAC] border-b border-[#e3daac1e]">
+                    45.97220305
+                  </td>
+                </tr>
+                <tr className="text-[8px] font-azeret_mono">
+                  <td className="py-2 text-[#E3DAAC] border-b border-[#e3daac1e]">
+                    04.10.2021
+                  </td>
+                  <td className="py-2 text-[#E3DAAC] border-b border-[#e3daac1e]">
+                    <span className="flex items-center">
+                      <img
+                        src="/icons/vip-line.svg"
+                        alt="vip"
+                        className="w-[9px] mr-1"
+                      />
+                      Reward
+                    </span>
+                  </td>
+                  <td className="py-2 text-[#B1F489] border-b border-[#e3daac1e]">
+                    Ξ 0.00631393
+                  </td>
+                  <td className="py-2 text-[#B1F489] border-b border-[#e3daac1e]">
+                    $21.00
+                  </td>
+                  <td className="py-2 text-[#E3DAAC] border-b border-[#e3daac1e]">
+                    5%
+                  </td>
+                  <td className="py-2 text-[#E3DAAC] border-b border-[#e3daac1e]">
+                    45.97220305
+                  </td>
+                </tr>
+                <tr className="text-[8px] font-azeret_mono">
+                  <td className="py-2 text-[#E3DAAC] border-b border-[#e3daac1e]">
+                    04.10.2021
+                  </td>
+                  <td className="py-2 text-[#E3DAAC] border-b border-[#e3daac1e]">
+                    <span className="flex items-center">
+                      <img
+                        src="/icons/vip-line.svg"
+                        alt="vip"
+                        className="w-[9px] mr-1"
+                      />
+                      Reward
+                    </span>
+                  </td>
+                  <td className="py-2 text-[#B1F489] border-b border-[#e3daac1e]">
+                    Ξ 0.00631393
+                  </td>
+                  <td className="py-2 text-[#B1F489] border-b border-[#e3daac1e]">
+                    $21.00
+                  </td>
+                  <td className="py-2 text-[#E3DAAC] border-b border-[#e3daac1e]">
+                    5%
+                  </td>
+                  <td className="py-2 text-[#E3DAAC] border-b border-[#e3daac1e]">
+                    45.97220305
+                  </td>
+                </tr>
+                <tr className="text-[8px] font-azeret_mono">
+                  <td className="py-2 text-[#E3DAAC] border-b border-[#e3daac1e]">
+                    04.10.2021
+                  </td>
+                  <td className="py-2 text-[#E3DAAC] border-b border-[#e3daac1e]">
+                    <span className="flex items-center">
+                      <img
+                        src="/icons/vip-line.svg"
+                        alt="vip"
+                        className="w-[9px] mr-1"
+                      />
+                      Reward
+                    </span>
+                  </td>
+                  <td className="py-2 text-[#B1F489] border-b border-[#e3daac1e]">
+                    Ξ 0.00631393
+                  </td>
+                  <td className="py-2 text-[#B1F489] border-b border-[#e3daac1e]">
+                    $21.00
+                  </td>
+                  <td className="py-2 text-[#E3DAAC] border-b border-[#e3daac1e]">
+                    5%
+                  </td>
+                  <td className="py-2 text-[#E3DAAC] border-b border-[#e3daac1e]">
+                    45.97220305
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>

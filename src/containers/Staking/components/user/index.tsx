@@ -11,7 +11,7 @@ const User = (props: Props) => {
         className="w-[32px] h-[32px] object-contain"
       />
       <div className="bg-[url(/images/staking/bg-user.svg)] bg-cover bg-no-repeat w-full h-full flex items-center justify-between">
-        <div className="flex  ml-2">
+        <div className="flex ml-2">
           <img
             src="/icons/eth.svg"
             alt="eth icons"
