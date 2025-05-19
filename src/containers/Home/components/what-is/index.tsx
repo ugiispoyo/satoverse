@@ -4,11 +4,16 @@ type Props = {};
 
 const WhatIs = (props: Props) => {
   return (
-    <div className="w-full bg-[url('/images/home/bg-whatis.svg')] min-h-[350px] relative">
-      <h1 className="font-joystix text-3xl pt-12 pl-12 text-[#B1F489]">
+    <div className="w-full lg:bg-[url('/images/home/bg-whatis.svg')] lg:min-h-[350px] bg-[url('/images/sidebar-reward/bg-reward-mobile.svg')] max-lg:bg-no-repeat max-lg:max-w-[380px] max-lg:h-[550px] max-lg:bg-cover relative max-lg:flex max-lg:flex-col max-lg:mx-auto max-lg:px-[45px] max-lg:py-[30px] max-[380px]:p-0">
+      <h1 className="font-joystix lg:text-3xl text-2xl lg:pt-12 lg:pl-12 text-[#B1F489]">
         What is <span className="text-[#00FFFF]">Satoverse</span>?
       </h1>
-      <div className="ml-[358px] text-[#D4CA99] font-usuzi text-xs mt-4">
+      <img
+        src="/images/home/whatis-mobile.svg"
+        alt="whatis"
+        className="lg:hidden max-lg:mt-4 h-[150px]"
+      />
+      <div className="lg:ml-[358px] text-[#D4CA99] font-usuzi text-xs mt-4 max-lg:w-full">
         <span className="text-[#00FFFF]">Satoverse</span> is the first Layer 2
         multi-chain memecoin built on Bitcoin, with a utility that unlocks
         faster, cheaper transactions.

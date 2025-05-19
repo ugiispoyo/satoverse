@@ -151,6 +151,12 @@ body {
   text-fill-color: transparent; /* fallback */
 }
 
+.bg-menu {
+  background: linear-gradient(180deg, #1c1c1c 0%, #b1f489 100%);
+  box-shadow: 0px 0px 16px 0px #21212199 inset;
+  box-shadow: 0px 0px 80px 0px #212121 inset;
+}
+
 @layer utilities {
   @keyframes marquee {
     0% {

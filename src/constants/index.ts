@@ -1,10 +1,28 @@
 export const menu = [
-  "howtobuy",
-  "tokenomics",
-  "roadmap",
-  "whitepaper",
-  "faq",
-  "staking",
+  {
+    label: "How To Buy",
+    pathname: "howtobuy",
+  },
+  {
+    label: "Tokenomics",
+    pathname: "tokenomics",
+  },
+  {
+    label: "Roadmap",
+    pathname: "roadmap",
+  },
+  {
+    label: "Whitepaper",
+    pathname: "whitepaper",
+  },
+  {
+    label: "F.A.Q",
+    pathname: "faq",
+  },
+  {
+    label: "Staking",
+    pathname: "staking",
+  },
 ];
 
 export const borderTop: Array<{ img: string; label: string }> = [

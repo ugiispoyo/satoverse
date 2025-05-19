@@ -13,11 +13,11 @@ const Reward = (props: Props) => {
 
   return (
     <>
-      <div className="w-full flex flex-col">
-        <div className="w-full flex justify-end relative min-h-[40px]">
-          <div className="max-w-[335px] w-full absolute right-[20px]">
+      <div className="w-full flex flex-col max-lg:mb-5">
+        <div className="w-full flex lg:justify-end justify-center relative min-h-[40px]">
+          <div className="lg:max-w-[335px] max-w-[310px] w-full lg:absolute lg:right-[20px]">
             <span
-              className="text-[#F4C46A] font-joystix text-[20px]"
+              className="text-[#F4C46A] font-joystix lg:text-[20px] text-base"
               style={{
                 textShadow: "0 0 10px rgba(227, 218, 172, 0.5)",
               }}
@@ -39,17 +39,18 @@ const Reward = (props: Props) => {
             </div>
           </div>
         </div>
-        <div className="w-full relative flex">
+
+        <div className="w-full relative flex max-lg:bg-[url('/images/sidebar-reward/bg-reward-mobile.svg')] max-lg:bg-no-repeat max-lg:min-h-[465px] max-lg:bg-cover">
           <img
             src="/images/sidebar-reward/bg-reward.svg"
             alt="Reward"
-            className="w-full max-w-[470px] min-h-[478px] absolute left-[-20px] z-[10]"
+            className="hidden lg:flex w-full max-w-[470px] min-h-[478px] absolute left-[-20px] z-[10]"
           />
 
-          <div className="w-full flex mt-[60px] items-end justify-center flex-col z-[11] relative">
-            <div className="w-full flex justify-center ml-5">
-              <img src="/images/sidebar-reward/buy.svg" alt="buy-bagde" />
-              <span className="text-[48px] font-joystix text-[#B1F489]">
+          <div className="w-full flex lg:mt-[60px] lg:items-end justify-center flex-col z-[11] relative">
+            <div className="w-full flex justify-center lg:ml-5">
+              <img src="/images/sidebar-reward/buy.svg" alt="buy-bagde" className="max-lg:hidden" />
+              <span className="lg:text-[48px] text-[35px] font-joystix text-[#B1F489]">
                 $SATO
               </span>
             </div>
@@ -60,14 +61,14 @@ const Reward = (props: Props) => {
               <span className="w-full block font-orbitron text-[#E3DAAC] text-[16px] text-center">
                 World's first Bitcoin Layer 2
               </span>
-              <div className="w-full pl-[30px] flex justify-center">
-                <div className="bg-[url('/images/sidebar-reward/bg-countdown.svg')] w-[318px] h-[146px] relative flex mt-3 flex-col">
-                  <div className="w-full flex gap-3 max-w-[282px] max-h-[70px] mx-auto mt-5">
+              <div className="w-full lg:pl-[30px] flex justify-center">
+                <div className="bg-[url('/images/sidebar-reward/bg-countdown.svg')] lg:w-[318px] lg:h-[146px] max-lg:bg-cover w-[310px] h-[142px] relative flex mt-3 flex-col">
+                  <div className="w-full flex gap-3 max-w-[282px] max-h-[70px] mx-auto mt-5 max-lg:justify-between">
                     <div className="flex flex-col justify-between items-center">
                       <span className="text-gradient-1 font-orbitron uppercase font-extrabold text-[12px] block text-center">
                         Days
                       </span>
-                      <span className="text-gradient-2 font-orbitron uppercase font-extrabold text-[32px] block text-center">
+                      <span className="text-gradient-2 font-orbitron uppercase font-extrabold text-[32px] max-lg:text-[28px] block text-center">
                         20
                       </span>
                     </div>
@@ -75,7 +76,7 @@ const Reward = (props: Props) => {
                       <span className="text-gradient-1 font-orbitron uppercase font-extrabold text-[12px] block text-center">
                         Hours
                       </span>
-                      <span className="text-gradient-2 font-orbitron uppercase font-extrabold text-[32px] block text-center">
+                      <span className="text-gradient-2 font-orbitron uppercase font-extrabold text-[32px] max-lg:text-[28px] block text-center">
                         20
                       </span>
                     </div>
@@ -83,7 +84,7 @@ const Reward = (props: Props) => {
                       <span className="text-gradient-1 font-orbitron uppercase font-extrabold text-[12px] block text-center">
                         Minutes
                       </span>
-                      <span className="text-gradient-2 font-orbitron uppercase font-extrabold text-[32px] block text-center">
+                      <span className="text-gradient-2 font-orbitron uppercase font-extrabold text-[32px] max-lg:text-[28px] block text-center">
                         20
                       </span>
                     </div>
@@ -91,7 +92,7 @@ const Reward = (props: Props) => {
                       <span className="text-gradient-1 font-orbitron uppercase font-extrabold text-[12px] block text-center">
                         Seconds
                       </span>
-                      <span className="text-gradient-2 font-orbitron uppercase font-extrabold text-[32px] block text-center">
+                      <span className="text-gradient-2 font-orbitron uppercase font-extrabold text-[32px] max-lg:text-[28px] block text-center">
                         20
                       </span>
                     </div>
@@ -99,13 +100,13 @@ const Reward = (props: Props) => {
                   <span className="text-gradient-1 font-orbitron uppercase font-extrabold text-[12px] block text-center mt-[20px]">
                     Until next price increase
                   </span>
-                  <div className="w-full flex justify-center ml-1 mt-2">
+                  <div className="w-full flex justify-center ml-1 lg:mt-2 mt-1">
                     <ProgressBlocks progressPercent={20} />
                   </div>
                 </div>
               </div>
             </div>
-            <div className="w-full max-w-[318px] relative flex mt-4 flex-col mx-auto items-end pl-[20px]">
+            <div className="w-full max-w-[318px] relative flex mt-4 flex-col mx-auto lg:items-end lg:pl-[20px]">
               <p className="text-[10px] font-orbitron text-[#E3DAAC] block text-center w-full uppercase font-extrabold">
                 USDT Raised:{" "}
                 <span className="text-gradient-3">
@@ -167,14 +168,14 @@ const Reward = (props: Props) => {
                 </button>
               </div>
               <Link href={"#"}>
-                <span className="underline text-[#E3DAAC] text-[11px] mt-3 block">
+                <span className="underline text-[#E3DAAC] font-orbitron uppercase text-[11px] mt-3 block max-lg:text-center max-lg:mt-5">
                   Don't have a wallet?
                 </span>
               </Link>
             </div>
           </div>
         </div>
-        <div className="w-full flex justify-end relative mt-5 z-[10] pr-[30px]">
+        <div className="w-full flex lg:justify-end justify-center relative mt-5 z-[10] lg:pr-[30px]">
           <button className="bg-btn-buy-with-solana flex rounded-md items-center min-h-[44px] w-full max-w-[240px]">
             <img
               src="/icons/solana.svg"

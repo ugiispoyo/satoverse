@@ -6,18 +6,18 @@ import WhatIs from "./what-is";
 const Components = () => {
   return (
     <div className="w-full max-w-[1126px] mx-auto mt-5 pb-8">
-      <div className="flex w-full">
-        <div className="w-full max-w-[690px] flex flex-col gap-4">
+      <div className="flex w-full max-lg:flex-col-reverse">
+        <div className="w-full lg:max-w-[690px] flex flex-col gap-4">
           <img
             src="/images/home/home.svg"
             alt="Home"
-            className="w-full max-w-[640px] h-auto"
+            className="w-full max-w-[640px] h-auto max-lg:mx-auto max-sm:px-4"
           />
           <div className="w-full">
             <WhatIs />
           </div>
         </div>
-        <div className="w-full max-w-[calc(1126px-690px)] mt-5">
+        <div className="w-full lg:max-w-[calc(1126px-690px)] max-w-[380px] max-lg:mx-auto mt-5">
           <Reward />
         </div>
       </div>
