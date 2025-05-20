@@ -1,12 +1,25 @@
 import Link from "next/link";
 import React, { useEffect } from "react";
 
+import { useRouter, usePathname, useSearchParams } from "next/navigation";
+
 type ModalProps = {
   isOpen: boolean;
   onClose: () => void;
 };
 
 const ModalConnectWalet: React.FC<ModalProps> = ({ isOpen, onClose }) => {
+  const router = useRouter();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+
+  const handleClick = () => {
+    const params = new URLSearchParams(searchParams);
+    params.set("connect-wallet", "true");
+    onClose();
+    router.push(`${pathname}?${params.toString()}`);
+  };
+
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
@@ -77,6 +90,7 @@ const ModalConnectWalet: React.FC<ModalProps> = ({ isOpen, onClose }) => {
             ].map((wallet, index) => (
               <button
                 key={index}
+                onClick={handleClick}
                 className="bg-btn-other-connect-wallet text-gradient-5 font-orbitron font-[900] w-full flex justify-between items-center h-[50px] px-4 sm:h-[56px]"
               >
                 <span className="text-gradient-5 text-sm sm:text-base">

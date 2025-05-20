@@ -65,7 +65,7 @@ export default function Layout(props: Props): JSX.Element {
   }
 
   return (
-    <div className="w-full min-h-[100vh] relative">
+    <div className="w-full h-[100vh]  relative">
       <div className="w-full overflow-hidden max-h-[40px] relative top-[-10px] z-[51]">
         <ul
           ref={borderRef}
@@ -83,7 +83,7 @@ export default function Layout(props: Props): JSX.Element {
       <img
         src={"/images/border-right-bottom.svg"}
         alt="border-bottom"
-        className="w-auto h-[329px] absolute bottom-0 right-0 max-lg:hidden"
+        className="w-auto h-[329px] fixed bottom-0 right-0 max-lg:hidden"
       />
     </div>
   );

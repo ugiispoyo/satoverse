@@ -1,14 +1,21 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 
 import ProgressBlocks from "../ProgressBlock";
 import SakingProgress from "../SakingProgress";
 import Modal from "../ModalConnectWalet";
 
+import { Input } from "../Form";
+import clsx from "clsx";
+
 type Props = {};
 
 const Reward = (props: Props) => {
+  const searchParams = useSearchParams();
+  const isConnectWallet = searchParams.get("connect-wallet");
+
   const [isOpenModal, setIsOpenModal] = useState(false);
 
   return (
@@ -40,16 +47,36 @@ const Reward = (props: Props) => {
           </div>
         </div>
 
-        <div className="w-full relative flex max-lg:bg-[url('/images/sidebar-reward/bg-reward-mobile.svg')] max-lg:bg-no-repeat max-lg:min-h-[465px] max-lg:bg-cover">
+        <div
+          className={clsx(
+            "w-full relative flex max-lg:bg-no-repeat max-lg:bg-cover",
+            isConnectWallet
+              ? "max-lg:bg-[#121512] max-lg:mt-4 max-lg:pb-3 max-lg:rounded"
+              : "max-lg:bg-[url('/images/sidebar-reward/bg-reward-mobile.svg')] max-lg:min-h-[465px]"
+          )}
+        >
           <img
-            src="/images/sidebar-reward/bg-reward.svg"
+            src={
+              isConnectWallet
+                ? "/images/sidebar-reward/bg-reward-wallet-active.svg"
+                : "/images/sidebar-reward/bg-reward.svg"
+            }
             alt="Reward"
-            className="hidden lg:flex w-full max-w-[470px] min-h-[478px] absolute left-[-20px] z-[10]"
+            className="hidden lg:flex w-full max-w-[470px] min-h-[478px] absolute left-[-20px] z-[6]"
+          />
+          <img
+            src="/images/web3-payments.svg"
+            alt="web3-payments"
+            className="h-[12px] absolute lg:top-[40px] lg:right-[70px] top-[5px] right-[40px]"
           />
 
           <div className="w-full flex lg:mt-[60px] lg:items-end justify-center flex-col z-[11] relative">
             <div className="w-full flex justify-center lg:ml-5">
-              <img src="/images/sidebar-reward/buy.svg" alt="buy-bagde" className="max-lg:hidden" />
+              <img
+                src="/images/sidebar-reward/buy.svg"
+                alt="buy-bagde"
+                className="max-lg:hidden"
+              />
               <span className="lg:text-[48px] text-[35px] font-joystix text-[#B1F489]">
                 $SATO
               </span>
@@ -139,43 +166,143 @@ const Reward = (props: Props) => {
                 </span>
                 <img src="/images/left.svg" alt="left" />
               </p>
-              <div className="flex w-full mt-4 gap-1">
-                <button
-                  className="cursor-pointer relative w-full max-w-[164px] flex items-center justify-center"
-                  onClick={() => setIsOpenModal(true)}
-                >
-                  <img
-                    src={"/images/sidebar-reward/bg-button-buy-with-card.svg"}
-                    alt="buy"
-                    className="absolute w-full h-[35px] z-[5]"
-                  />
-                  <span className="text-[11px] text-gradient-5 z-[6]">
-                    BUY WITH CARD
+              {isConnectWallet ? (
+                <div className="w-full mt-4 flex flex-col gap-1">
+                  <div className="w-full flex items-end gap-1 relative">
+                    <div className="flex flex-col w-full max-w-[220px]">
+                      <Input label="Pay with eth" defaultValue={0} />
+                    </div>
+                    <button className="relative w-full max-w-[125px] h-[36px] bg-[#1c1c1c] flex items-center justify-center">
+                      <img
+                        src="/images/sidebar-reward/bg-button.svg"
+                        className="absolute w-full bottom-0 z-[3]"
+                        alt="bg"
+                      />
+                      <div className="w-full flex items-center justify-center z-[4] relative gap-1">
+                        <img
+                          src="/icons/coin/4.png"
+                          alt="eth"
+                          className="h-[12px] w-[12px]"
+                        />
+                        <span className="text-[10px] text-[#E3DAAC] font-[900] font-orbitron block">
+                          ETH
+                        </span>
+                        <img
+                          src="/icons/double-arrow-left.png"
+                          alt="eth"
+                          className="h-[6px]"
+                        />
+                      </div>
+                    </button>
+                    <span className="absolute uppercase font-orbitron text-[10px] font-[900] text-[#E3DAAC] top-[7px] right-[16%]">
+                      <span className="text-[#F95D51] mr-1">MAX</span>Balance =
+                      0
+                    </span>
+                  </div>
+                  <div className="w-full relative">
+                    <Input
+                      label="Receive solx"
+                      defaultValue={0}
+                      endAdornment={
+                        <img
+                          src="/icons/satoverse.svg"
+                          alt="satoverse"
+                          className="w-[16px]"
+                        />
+                      }
+                    />
+                  </div>
+                  <span className="uppercase text-center block text-[10px] font-orbitron text-[#E3DAAC] font-[900] mt-1">
+                    you do not have enough eth to pay for this transaction.
                   </span>
-                </button>
-                <button
-                  className="cursor-pointer relative w-full max-w-[164px] flex items-center justify-center"
-                  onClick={() => setIsOpenModal(true)}
-                >
-                  <img
-                    src={"/images/sidebar-reward/bg-button-buy-with-cripto.svg"}
-                    alt="buy"
-                    className="absolute w-full h-[35px] z-[5]"
-                  />
-                  <span className="text-[11px] text-gradient-5 z-[6]">
-                    BUY WITH CRYTO
+
+                  <button
+                    className="cursor-pointer relative w-full max-w-[280px] flex items-center justify-center mx-auto mt-2"
+                    onClick={() => setIsOpenModal(true)}
+                  >
+                    <img
+                      src={"/images/sidebar-reward/bg-button-buy-stake.svg"}
+                      alt="buy"
+                      className="absolute w-full h-[35px] z-[5]"
+                    />
+                    <span className="text-[11px] text-gradient-5 z-[6] font-[900]">
+                      BUY AND STAKE FOR 900% REWARDS
+                    </span>
+                  </button>
+                  <button
+                    className="cursor-pointer relative w-full max-w-[280px] flex items-center justify-center mx-auto mt-4"
+                    onClick={() => setIsOpenModal(true)}
+                  >
+                    <img
+                      src={"/images/sidebar-reward/bg-button-buy-solx.svg"}
+                      alt="buy"
+                      className="absolute w-full h-[35px] z-[5]"
+                    />
+                    <span className="text-[11px] text-gradient-5 z-[6] font-[900]">
+                      BUY SOLX
+                    </span>
+                  </button>
+
+                  <span className="uppercase text-center block text-[10px] font-orbitron text-[#E3DAAC] font-[900] mt-2">
+                    WANT TO PAY WITH CARD INSTEAD?{" "}
+                    <Link href="#">
+                      <span className="text-[#A0FF8E] uppercase underline">
+                        CLICK HERE!
+                      </span>
+                    </Link>
+                    <br />
+                    <Link href={"#"}>
+                      <span className="underline">
+                        nOT ENOUGH ETH? TOP UP NOW
+                      </span>
+                    </Link>
                   </span>
-                </button>
-              </div>
+                </div>
+              ) : (
+                <>
+                  <div className="flex w-full mt-4 gap-1">
+                    <button
+                      className="cursor-pointer relative w-full max-w-[164px] flex items-center justify-center"
+                      onClick={() => setIsOpenModal(true)}
+                    >
+                      <img
+                        src={
+                          "/images/sidebar-reward/bg-button-buy-with-card.svg"
+                        }
+                        alt="buy"
+                        className="absolute w-full h-[35px] z-[5]"
+                      />
+                      <span className="text-[11px] text-gradient-5 z-[6] font-[900]">
+                        BUY WITH CARD
+                      </span>
+                    </button>
+                    <button
+                      className="cursor-pointer relative w-full max-w-[164px] flex items-center justify-center"
+                      onClick={() => setIsOpenModal(true)}
+                    >
+                      <img
+                        src={
+                          "/images/sidebar-reward/bg-button-buy-with-cripto.svg"
+                        }
+                        alt="buy"
+                        className="absolute w-full h-[35px] z-[5]"
+                      />
+                      <span className="text-[11px] text-gradient-5 z-[6] font-[900]">
+                        BUY WITH CRYTO
+                      </span>
+                    </button>
+                  </div>
+                </>
+              )}
               <Link href={"#"}>
-                <span className="underline text-[#E3DAAC] font-orbitron uppercase text-[11px] mt-3 block max-lg:text-center max-lg:mt-5">
+                <span className="underline text-[#E3DAAC] font-orbitron uppercase text-[11px] mt-3 block max-lg:text-center max-lg:mt-5 font-[900]">
                   Don't have a wallet?
                 </span>
               </Link>
             </div>
           </div>
         </div>
-        <div className="w-full flex lg:justify-end justify-center relative mt-5 z-[10] lg:pr-[30px]">
+        <div className="w-full flex lg:justify-end justify-center relative mt-5 z-[10] lg:pr-[30px] mb-5">
           <button className="bg-btn-buy-with-solana flex rounded-md items-center min-h-[44px] w-full max-w-[240px]">
             <img
               src="/icons/solana.svg"
