@@ -9,6 +9,7 @@ import Modal from "../ModalConnectWalet";
 
 import { Input } from "../Form";
 import clsx from "clsx";
+import ModalChoosePayment from "../ModalChoosePayment";
 
 type Props = {};
 
@@ -17,6 +18,8 @@ const Reward = (props: Props) => {
   const isConnectWallet = searchParams.get("connect-wallet");
 
   const [isOpenModal, setIsOpenModal] = useState(false);
+  const [isOpenModalChoosePayment, setIsOpenModalChoosePayment] =
+    useState(false);
 
   return (
     <>
@@ -172,7 +175,10 @@ const Reward = (props: Props) => {
                     <div className="flex flex-col w-full max-w-[220px]">
                       <Input label="Pay with eth" defaultValue={0} />
                     </div>
-                    <button className="relative w-full max-w-[125px] h-[36px] bg-[#1c1c1c] flex items-center justify-center">
+                    <button
+                      onClick={() => setIsOpenModalChoosePayment(true)}
+                      className="relative w-full max-w-[125px] h-[36px] bg-[#1c1c1c] flex items-center justify-center"
+                    >
                       <img
                         src="/images/sidebar-reward/bg-button.svg"
                         className="absolute w-full bottom-0 z-[3]"
@@ -317,6 +323,10 @@ const Reward = (props: Props) => {
       </div>
 
       <Modal isOpen={isOpenModal} onClose={() => setIsOpenModal(false)} />
+      <ModalChoosePayment
+        isOpen={isOpenModalChoosePayment}
+        onClose={() => setIsOpenModalChoosePayment(false)}
+      />
     </>
   );
 };
