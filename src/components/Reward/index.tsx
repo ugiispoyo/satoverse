@@ -2,14 +2,15 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
+import clsx from "clsx";
 
 import ProgressBlocks from "../ProgressBlock";
 import SakingProgress from "../SakingProgress";
 import Modal from "../ModalConnectWalet";
 
 import { Input } from "../Form";
-import clsx from "clsx";
 import ModalChoosePayment from "../ModalChoosePayment";
+import ModalStatus from "../ModalStatus";
 
 type Props = {};
 
@@ -20,6 +21,7 @@ const Reward = (props: Props) => {
   const [isOpenModal, setIsOpenModal] = useState(false);
   const [isOpenModalChoosePayment, setIsOpenModalChoosePayment] =
     useState(false);
+  const [isOpenModalStatus, setIsOpenModalStatus] = useState(false);
 
   return (
     <>
@@ -309,7 +311,10 @@ const Reward = (props: Props) => {
           </div>
         </div>
         <div className="w-full flex lg:justify-end justify-center relative mt-5 z-[10] lg:pr-[30px] mb-5">
-          <button className="bg-btn-buy-with-solana flex rounded-md items-center min-h-[44px] w-full max-w-[240px]">
+          <button
+            onClick={() => setIsOpenModalStatus(true)}
+            className="bg-btn-buy-with-solana flex rounded-md items-center min-h-[44px] w-full max-w-[240px]"
+          >
             <img
               src="/icons/solana.svg"
               alt="solana"
@@ -326,6 +331,11 @@ const Reward = (props: Props) => {
       <ModalChoosePayment
         isOpen={isOpenModalChoosePayment}
         onClose={() => setIsOpenModalChoosePayment(false)}
+      />
+      <ModalStatus
+        isOpen={isOpenModalStatus}
+        onClose={() => setIsOpenModalStatus(false)}
+        status="success"
       />
     </>
   );
