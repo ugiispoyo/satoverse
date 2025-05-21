@@ -3,7 +3,7 @@
 import dynamic from "next/dynamic";
 
 import SkeletonLoading from "@/components/SkeletonLoading";
-import LazyImage from "@/components/LazyImage";
+import VideoPlayer from "@/components/VideoPlayer";
 
 const Reward = dynamic(() => import("@/components/Reward"), {
   ssr: false,
@@ -20,15 +20,8 @@ const Components = () => {
     <div className="w-full max-w-[1126px] mx-auto mt-5 pb-8">
       <div className="flex w-full max-lg:flex-col-reverse">
         <div className="w-full lg:max-w-[690px] flex flex-col gap-4">
-          <div className="w-full max-w-[529px]">
-            <LazyImage
-              src="/images/home/home.svg"
-              alt="Satoverse Home"
-              width={529}
-              height={244}
-              backgroundColorWrapper="#2f322d98"
-              minHeightWrapper="244px"
-            />
+          <div className="w-full max-w-[529px] flex justify-center mx-auto lg:mt-6">
+            <VideoPlayer src="/satoverse.mp4" />
           </div>
           <div className="w-full">
             <WhatIs />

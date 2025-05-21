@@ -270,7 +270,7 @@ const Reward = (props: Props) => {
                 <>
                   <div className="flex w-full mt-4 gap-1">
                     <button
-                      className="cursor-pointer relative w-full max-w-[164px] flex items-center justify-center"
+                      className="cursor-pointer relative w-full max-w-[170px] flex items-center justify-center"
                       onClick={() => setIsOpenModal(true)}
                     >
                       <img
@@ -278,14 +278,14 @@ const Reward = (props: Props) => {
                           "/images/sidebar-reward/bg-button-buy-with-card.svg"
                         }
                         alt="buy"
-                        className="absolute w-full h-[35px] z-[5]"
+                        className="absolute w-full h-[45px] z-[5]"
                       />
-                      <span className="text-[11px] text-gradient-5 z-[6] font-[900]">
+                      <span className="text-[11px] text-gradient-5 z-[6] font-[900] font-orbitron">
                         BUY WITH CARD
                       </span>
                     </button>
                     <button
-                      className="cursor-pointer relative w-full max-w-[164px] flex items-center justify-center"
+                      className="cursor-pointer relative w-full max-w-[170px] flex items-center justify-center"
                       onClick={() => setIsOpenModal(true)}
                     >
                       <img
@@ -293,9 +293,9 @@ const Reward = (props: Props) => {
                           "/images/sidebar-reward/bg-button-buy-with-cripto.svg"
                         }
                         alt="buy"
-                        className="absolute w-full h-[35px] z-[5]"
+                        className="absolute w-full h-[45px] z-[5]"
                       />
-                      <span className="text-[11px] text-gradient-5 z-[6] font-[900]">
+                      <span className="text-[11px] text-gradient-5 z-[6] font-[900] font-orbitron">
                         BUY WITH CRYTO
                       </span>
                     </button>
