@@ -56,15 +56,15 @@ const ModalChoosePayment: React.FC<ModalProps> = ({ isOpen, onClose }) => {
               </span>
             </button>
             <button className="bg-btn-other-connect-wallet gap-1 font-orbitron font-[900] w-full p-0! max-w-[82px]! rounded-md! flex justify-center items-center h-[50px] sm:h-[56px]">
-              <img src="/icons/coin/4.png" className="w-[20px]" />
+              <img src="/icons/coin/4.png" className="w-[20px]" alt="icon-eth" />
               <span className="text-gradient-5 text-sm sm:text-base">ETH</span>
             </button>
             <button className="bg-btn-other-connect-wallet gap-1 font-orbitron font-[900] w-full p-0! max-w-[82px]! rounded-md! flex justify-center items-center h-[50px] sm:h-[56px]">
-              <img src="/icons/coin/1.png" className="w-[20px]" />
+              <img src="/icons/coin/1.png" className="w-[20px]" alt="icon-bsc" />
               <span className="text-gradient-5 text-sm sm:text-base">BSC</span>
             </button>
             <button className="bg-btn-other-connect-wallet gap-1 font-orbitron font-[900] w-full p-0! max-w-[82px]! rounded-md! flex justify-center items-center h-[50px] sm:h-[56px]">
-              <img src="/icons/coin/5.png" className="w-[20px]" />
+              <img src="/icons/coin/5.png" className="w-[20px]" alt="icon-sol" />
               <span className="text-gradient-5 text-sm sm:text-base">SOL</span>
             </button>
           </div>
