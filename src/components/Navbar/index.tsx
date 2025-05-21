@@ -35,7 +35,7 @@ export default function Navbar(props: Props): JSX.Element {
         src="/images/logo.png"
         onClick={() => router.push("/")}
         alt="logo"
-        className="xl:w-[220px] lg:w-[160px] w-[230px] h-auto cursor-pointer max-sm:w-[180px]"
+        className="xl:w-[220px] lg:w-[160px] sm:w-[230px] h-auto cursor-pointer max-sm:w-[180px] z-[10]"
       />
 
       {/* Desktop Menu */}
@@ -54,8 +54,8 @@ export default function Navbar(props: Props): JSX.Element {
                     className={`absolute top-0 left-0 w-full h-full object-contain transition-opacity duration-300 ease-in-out
                       ${
                         isActive && !isWhitepaper
-                          ? "opacity-0"
-                          : "opacity-100 group-hover:opacity-0"
+                          ? "opacity-0 z-[9]"
+                          : "opacity-100 group-hover:opacity-0 z-[10]"
                       }`}
                   />
                   <img
@@ -64,8 +64,8 @@ export default function Navbar(props: Props): JSX.Element {
                     className={`absolute top-0 left-0 w-full h-full object-contain transition-opacity duration-300 ease-in-out
                       ${
                         isActive && !isWhitepaper
-                          ? "opacity-100"
-                          : "opacity-0 group-hover:opacity-100"
+                          ? "opacity-100 z-[10]"
+                          : "opacity-0 group-hover:opacity-100 z-[9]"
                       }`}
                   />
                 </div>
