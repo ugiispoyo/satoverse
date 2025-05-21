@@ -8,7 +8,7 @@ function LazyImage({
   width,
   height,
   minHeightWrapper = "200px",
-  backgroundColorWrapper = "#191919",
+  backgroundColorWrapper = "#2f322d98",
 }: {
   src: string;
   alt: string;
@@ -18,6 +18,7 @@ function LazyImage({
   backgroundColorWrapper?: string;
 }) {
   const [isVisible, setIsVisible] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
   const ref = useRef(null);
 
   useEffect(() => {
@@ -39,8 +40,9 @@ function LazyImage({
     <div
       ref={ref}
       style={{
-        minHeight: minHeightWrapper,
-        backgroundColor: backgroundColorWrapper,
+        minHeight: isLoaded ? "auto" : minHeightWrapper,
+        backgroundColor: isLoaded ? "transparent" : backgroundColorWrapper,
+        transition: "background-color 0.5s ease",
       }}
     >
       {isVisible && (
@@ -53,6 +55,7 @@ function LazyImage({
           onLoadingComplete={(img) => {
             img.classList.remove("blur-sm", "opacity-30");
             img.classList.add("blur-0", "opacity-100");
+            setIsLoaded(true);
           }}
           loading="lazy"
         />
@@ -60,4 +63,5 @@ function LazyImage({
     </div>
   );
 }
+
 export default LazyImage;

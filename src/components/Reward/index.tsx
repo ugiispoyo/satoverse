@@ -45,7 +45,7 @@ const Reward = (props: Props) => {
               <div className="w-full max-w-[272px] h-[30px] pl-2">
                 <SakingProgress progressPercent={80} />
               </div>
-              <span className="text-[6px] font-orbitron text-[#C0C0C0] absolute bottom-[-5px] left-0">
+              <span className="text-[10px] font-orbitron text-[#C0C0C0] absolute bottom-[-5px] left-0">
                 *Will decrease Next Stage
               </span>
             </div>
@@ -90,14 +90,14 @@ const Reward = (props: Props) => {
               <span className="text-[24px] font-joystix text-[#B1F489] w-full block text-center">
                 presale NOW!{" "}
               </span>
-              <span className="w-full block font-orbitron text-[#E3DAAC] text-[16px] text-center">
+              <span className="w-full block font-[900] font-orbitron text-[#E3DAAC] text-[16px] text-center">
                 World's first Bitcoin Layer 2
               </span>
               <div className="w-full lg:pl-[30px] flex justify-center">
                 <div className="bg-[url('/images/sidebar-reward/bg-countdown.svg')] lg:w-[318px] lg:h-[146px] max-lg:bg-cover w-[310px] h-[142px] relative flex mt-3 flex-col">
                   <div className="w-full flex gap-3 max-w-[282px] max-h-[70px] mx-auto mt-5 max-lg:justify-between">
                     <div className="flex flex-col justify-between items-center">
-                      <span className="text-gradient-1 font-orbitron uppercase font-extrabold text-[12px] block text-center">
+                      <span className="text-[#E3DAAC] font-orbitron uppercase font-extrabold text-[12px] block text-center">
                         Days
                       </span>
                       <span className="text-gradient-2 font-orbitron uppercase font-extrabold text-[32px] max-lg:text-[28px] block text-center">
@@ -105,7 +105,7 @@ const Reward = (props: Props) => {
                       </span>
                     </div>
                     <div className="flex flex-col justify-between items-center">
-                      <span className="text-gradient-1 font-orbitron uppercase font-extrabold text-[12px] block text-center">
+                      <span className="text-[#E3DAAC] font-orbitron uppercase font-extrabold text-[12px] block text-center">
                         Hours
                       </span>
                       <span className="text-gradient-2 font-orbitron uppercase font-extrabold text-[32px] max-lg:text-[28px] block text-center">
@@ -113,7 +113,7 @@ const Reward = (props: Props) => {
                       </span>
                     </div>
                     <div className="flex flex-col justify-between items-center">
-                      <span className="text-gradient-1 font-orbitron uppercase font-extrabold text-[12px] block text-center">
+                      <span className="text-[#E3DAAC] font-orbitron uppercase font-extrabold text-[12px] block text-center">
                         Minutes
                       </span>
                       <span className="text-gradient-2 font-orbitron uppercase font-extrabold text-[32px] max-lg:text-[28px] block text-center">
@@ -121,7 +121,7 @@ const Reward = (props: Props) => {
                       </span>
                     </div>
                     <div className="flex flex-col justify-between items-center">
-                      <span className="text-gradient-1 font-orbitron uppercase font-extrabold text-[12px] block text-center">
+                      <span className="text-[#E3DAAC] font-orbitron uppercase font-extrabold text-[12px] block text-center">
                         Seconds
                       </span>
                       <span className="text-gradient-2 font-orbitron uppercase font-extrabold text-[32px] max-lg:text-[28px] block text-center">

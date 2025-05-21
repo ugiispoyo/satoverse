@@ -1,17 +1,32 @@
 "use client";
 
-import Reward from "@/components/Reward";
-import WhatIs from "./what-is";
+import dynamic from "next/dynamic";
+
+import SkeletonLoading from "@/components/SkeletonLoading";
+import LazyImage from "@/components/LazyImage";
+
+const Reward = dynamic(() => import("@/components/Reward"), {
+  ssr: false,
+  loading: () => <SkeletonLoading className="min-h-[400px]" />,
+});
+
+const WhatIs = dynamic(() => import("./what-is"), {
+  ssr: false,
+  loading: () => <SkeletonLoading className="min-h-[300px]" />,
+});
 
 const Components = () => {
   return (
     <div className="w-full max-w-[1126px] mx-auto mt-5 pb-8">
       <div className="flex w-full max-lg:flex-col-reverse">
         <div className="w-full lg:max-w-[690px] flex flex-col gap-4">
-          <img
+          <LazyImage
             src="/images/home/home.svg"
-            alt="Home"
-            className="w-full max-w-[640px] h-auto max-lg:mx-auto max-sm:px-4"
+            alt="Satoverse Home"
+            width={640}
+            height={400}
+            backgroundColorWrapper="#2f322d98"
+            minHeightWrapper="300px"
           />
           <div className="w-full">
             <WhatIs />
