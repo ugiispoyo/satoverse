@@ -64,6 +64,31 @@ export default function RootLayout({
           as="image"
           type="image/svg+xml"
         />
+        {/* Preload Joystix */}
+        <link
+          rel="preload"
+          href="/fonts/Joystix/joystix.otf"
+          as="font"
+          type="font/otf"
+          crossOrigin="anonymous"
+        />
+        {/* Preload Strenuoes */}
+        <link
+          rel="preload"
+          href="/fonts/Strenuoes/strenuous.otf"
+          as="font"
+          type="font/otf"
+          crossOrigin="anonymous"
+        />
+
+        {/* Preload Usuzi */}
+        <link
+          rel="preload"
+          href="/fonts/Usuzi/usuzi.ttf"
+          as="font"
+          type="font/ttf"
+          crossOrigin="anonymous"
+        />
       </head>
       <body
         className={`${orbitron.variable} ${azeret_mono.variable} antialiased`}
