@@ -57,6 +57,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link
+          rel="preload"
+          href="/images/bg.svg"
+          as="image"
+          type="image/svg+xml"
+        />
+      </head>
       <body
         className={`${orbitron.variable} ${azeret_mono.variable} antialiased`}
       >
