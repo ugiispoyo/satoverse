@@ -20,6 +20,34 @@ export const metadata: Metadata = {
   title: "Satoverse",
   description:
     "Satoverse is the first Layer 2 multi-chain memecoin built on Bitcoin, with a utility that unlocks faster, cheaper transactions. Bitcoin's slow speed, high costs, and massive energy demands have made it impossible for meme culture to thrive. Satoverse breaks these barriers with its fast, scalable Layer 2, unleashing memecoins on the biggest, most user-rich blockchain.",
+  icons: {
+    icon: "/images/favicon.png",
+    shortcut: "/images/favicon.png",
+  },
+  openGraph: {
+    title: "Satoverse - The First Layer 2 Memecoin on Bitcoin",
+    description:
+      "Satoverse brings memecoins to Bitcoin with a fast, scalable Layer 2 solution. Join the revolution.",
+    url: "https://satoverse.xyz",
+    siteName: "Satoverse",
+    images: [
+      {
+        url: "/images/favicon.png",
+        width: 1200,
+        height: 630,
+        alt: "Satoverse Open Graph Image",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Satoverse - The First Layer 2 Memecoin on Bitcoin",
+    description:
+      "Satoverse breaks Bitcoin's limits to unleash meme culture. Experience low fees and high speed.",
+    images: ["/images/favicon.pngg"],
+    creator: "@satoverse",
+  },
 };
 
 export default function RootLayout({
