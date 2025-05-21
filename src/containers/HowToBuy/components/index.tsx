@@ -36,7 +36,7 @@ const Components = () => {
                     You will need a wallet to hold your $SATO.
                   </p>
                   <Link href={"#"}>
-                    <span className="text-[10px] underline">DOWNLOAD</span>
+                    <span className="text-[10px] underline font-[900] uppercase">DOWNLOAD</span>
                   </Link>
                 </li>
                 <li>

@@ -13,7 +13,7 @@ const WhatIs = (props: Props) => {
         alt="whatis"
         className="lg:hidden max-lg:mt-4 h-[150px]"
       />
-      <div className="lg:ml-[358px] text-[#D4CA99] font-usuzi text-xs mt-4 max-lg:w-full max-lg:mb-[25px] max:lg:overflow-hidden max-lg:overflow-y-scroll">
+      <div className="lg:ml-[358px] text-[#D4CA99] uppercase font-azeret_mono font-[500] text-xs mt-4 max-lg:w-full max-lg:mb-[25px] max:lg:overflow-hidden max-lg:overflow-y-scroll">
         <span className="text-[#00FFFF]">Satoverse</span> is the first Layer 2
         multi-chain memecoin built on Bitcoin, with a utility that unlocks
         faster, cheaper transactions.

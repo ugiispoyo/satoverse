@@ -20,14 +20,16 @@ const Components = () => {
     <div className="w-full max-w-[1126px] mx-auto mt-5 pb-8">
       <div className="flex w-full max-lg:flex-col-reverse">
         <div className="w-full lg:max-w-[690px] flex flex-col gap-4">
-          <LazyImage
-            src="/images/home/home.svg"
-            alt="Satoverse Home"
-            width={640}
-            height={400}
-            backgroundColorWrapper="#2f322d98"
-            minHeightWrapper="300px"
-          />
+          <div className="w-full max-w-[529px]">
+            <LazyImage
+              src="/images/home/home.svg"
+              alt="Satoverse Home"
+              width={529}
+              height={244}
+              backgroundColorWrapper="#2f322d98"
+              minHeightWrapper="244px"
+            />
+          </div>
           <div className="w-full">
             <WhatIs />
           </div>
