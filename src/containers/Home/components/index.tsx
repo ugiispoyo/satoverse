@@ -1,19 +1,8 @@
 "use client";
 
-import dynamic from "next/dynamic";
-
-import SkeletonLoading from "@/components/SkeletonLoading";
 import VideoPlayer from "@/components/VideoPlayer";
-
-const Reward = dynamic(() => import("@/components/Reward"), {
-  ssr: false,
-  loading: () => <SkeletonLoading className="min-h-[400px]" />,
-});
-
-const WhatIs = dynamic(() => import("./what-is"), {
-  ssr: false,
-  loading: () => <SkeletonLoading className="min-h-[300px]" />,
-});
+import Reward from "@/components/Reward";
+import WhatIs from "./what-is";
 
 const Components = () => {
   return (

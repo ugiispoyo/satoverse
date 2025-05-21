@@ -1,14 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import dynamic from "next/dynamic";
 
-import SkeletonLoading from "@/components/SkeletonLoading";
-
-const Reward = dynamic(() => import("@/components/Reward"), {
-  ssr: false,
-  loading: () => <SkeletonLoading className="min-h-[400px]" />,
-});
+import Reward from "@/components/Reward";
 
 const Components = () => {
   return (

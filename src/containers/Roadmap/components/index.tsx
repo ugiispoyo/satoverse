@@ -1,7 +1,6 @@
 "use client";
 
 import Reward from "@/components/Reward";
-import Link from "next/link";
 
 const Components = () => {
   return (
