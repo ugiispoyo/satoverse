@@ -38,7 +38,6 @@ function LazyImage({
   return (
     <div
       ref={ref}
-      className="bg-gray-900"
       style={{
         minHeight: minHeightWrapper,
         backgroundColor: backgroundColorWrapper,

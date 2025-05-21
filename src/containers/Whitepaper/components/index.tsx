@@ -6,7 +6,7 @@ import LazyImage from "@/components/LazyImage";
 const Components = () => {
   return (
     <div className="w-full max-w-[500px] mx-auto mt-9 mb-5">
-      <div className="w-full flex flex-col gap-4 px-4">
+      <div className="w-full flex flex-col gap-4 px-4 pb-6">
         {Array.from({ length: 8 }).map((_, i) => (
           <LazyImage
             key={i}
