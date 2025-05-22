@@ -8,8 +8,8 @@ const Components = () => {
     <div className="w-full max-w-[1126px] mx-auto mt-9 ">
       <div className="flex w-full items-center max-[1120px]:flex-col-reverse">
         <div className="w-full max-w-[690px] flex flex-col gap-4">
-          <div className="w-full bg-[url('/images/tokenomics/bg-content.svg')] min-h-[489px] px-4 flex font-orbitron max-[1120px]:bg-[url('/images/sidebar-reward/bg-reward-mobile.svg')] max-[1120px]:bg-no-repeat max-[1120px]:max-w-[380px] max-[1120px]:h-[550px] max-[1120px]:bg-cover relative max-[1120px]:flex max-[1120px]:flex-col max-[1120px]:mx-auto max-[1120px]:px-[45px] max-[1120px]:py-[30px]">
-            <h1 className="font-joystix text-[29px] max-[1120px]:text-2xl text-[#B1F489] mt-8 ml-8 max-[1120px]:mt-0 max-[1120px]:ml-0">
+          <div className="w-full bg-[url('/images/tokenomics/bg-content.png')] min-h-[489px] px-4 flex font-orbitron max-[1120px]:bg-[url('/images/sidebar-reward/bg-reward-mobile.svg')] max-[1120px]:bg-no-repeat max-[1120px]:max-w-[380px] max-[1120px]:h-[550px] max-[1120px]:bg-cover relative max-[1120px]:flex max-[1120px]:flex-col max-[1120px]:mx-auto max-[1120px]:px-[45px] max-[1120px]:py-[30px]">
+            <h1 className="font-joystix text-[29px] max-[1120px]:text-2xl text-[#B1F489] mt-9 ml-8 max-[1120px]:mt-0 max-[1120px]:ml-0">
               TOkenomics
             </h1>
 
@@ -127,7 +127,7 @@ const Components = () => {
                 </span>
               </div>
 
-              <div className="w-full top-[55%] left-[69%] absolute uppercase font-extrabold">
+              <div className="w-full top-[55%] left-[70%] absolute uppercase font-extrabold">
                 <h3 className="text-[#DEB567] text-base text-shadow-white w-full max-w-[227px]">
                   15% — Staking Rewards
                 </h3>
@@ -137,7 +137,7 @@ const Components = () => {
                 </span>
               </div>
 
-              <div className="w-full top-[72%] left-[62%] absolute uppercase font-extrabold">
+              <div className="w-full top-[72%] left-[63%] absolute uppercase font-extrabold">
                 <h3 className="text-[#9A65C4] text-base text-shadow-white w-full max-w-[227px]">
                   10% — Exchange Liquidity
                 </h3>

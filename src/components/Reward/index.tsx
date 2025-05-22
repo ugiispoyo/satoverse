@@ -64,10 +64,10 @@ const Reward = (props: Props) => {
             src={
               isConnectWallet
                 ? "/images/sidebar-reward/bg-reward-wallet-active.svg"
-                : "/images/sidebar-reward/bg-reward.svg"
+                : "/images/sidebar-reward/bg-reward.png"
             }
             alt="Reward"
-            className="hidden lg:flex w-full max-w-[470px] min-h-[478px] absolute left-[-20px] z-[6]"
+            className="hidden lg:flex w-full min-h-[478px] absolute left-[-20px] z-[6]"
           />
           <img
             src="/images/web3-payments.svg"
