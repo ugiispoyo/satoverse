@@ -105,7 +105,7 @@ export default function Navbar(props: Props): JSX.Element {
       {isMenuOpen && (
         <div
           className={clsx(
-            "fixed top-0 right-0 w-full h-full bg-menu z-40 text-white flex flex-col items-start px-6 py-8 space-y-6 text-xl font-bold tracking-wide transform transition-transform duration-300 ease-in-out",
+            "fixed top-0 right-0 w-full h-full bg-menu z-40 text-white flex flex-col items-start px-6 py-8 space-y-6 text-xl font-bold tracking-wide transform transition-transform duration-300 ease-in-out overflow-auto",
             isMenuOpen ? "translate-x-0" : "translate-x-full"
           )}
         >
