@@ -69,11 +69,11 @@ export default function RootLayout({
           href="/images/tokenomics/bg-content.png"
           as="image"
         />
-        <link
-          rel="preload"
-          href="/images/home/bg-whatis.png"
-          as="image"
-        />
+        <link rel="preload" href="/images/home/bg-whatis.png" as="image" />
+        <link rel="preload" href="/images/howtobuy/bg-content.png" as="image" />
+        <link rel="preload" href="/images/roadmap/bg-content.png" as="image" />
+        <link rel="preload" href="/images/faq/bg-content.png" as="image" />
+
         {/* Preload Joystix */}
         <link
           rel="preload"

@@ -7,7 +7,7 @@ const Components = () => {
     <div className="w-full max-w-[1126px] mx-auto mt-9 ">
       <div className="flex w-full items-center max-lg:flex-col-reverse">
         <div className="w-full max-w-[690px] flex flex-col gap-4">
-          <div className="w-full lg:bg-[url('/images/roadmap/bg-content.svg')] bg-[url('/images/sidebar-reward/bg-reward-mobile.svg')] min-h-[489px] px-4 max-lg:bg-no-repeat max-lg:max-w-[380px] max-lg:h-[550px] max-lg:bg-cover relative max-lg:flex max-lg:flex-col max-lg:mx-auto max-lg:px-[45px] max-lg:py-[30px] max-[380px]:p-0">
+          <div className="w-full lg:bg-[url('/images/roadmap/bg-content.png')] bg-[url('/images/sidebar-reward/bg-reward-mobile.svg')] min-h-[489px] px-4 max-lg:bg-no-repeat max-lg:max-w-[380px] max-lg:h-[550px] max-lg:bg-cover relative max-lg:flex max-lg:flex-col max-lg:mx-auto max-lg:px-[45px] max-lg:py-[30px] max-[380px]:p-0">
             <h1 className="font-joystix lg:hidden text-2xl lg:pt-12 lg:pl-13 text-[#B1F489]">
               ROADMAP
             </h1>
