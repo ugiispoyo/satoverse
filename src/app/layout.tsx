@@ -74,6 +74,11 @@ export default function RootLayout({
         <link rel="preload" href="/images/roadmap/bg-content.png" as="image" />
         <link rel="preload" href="/images/faq/bg-content.png" as="image" />
 
+        <link rel="preload" href="/images/staking/bg-balence.png" as="image" />
+        <link rel="preload" href="/images/staking/bg-earned.png" as="image" />
+        <link rel="preload" href="/images/staking/bg-apr.png" as="image" />
+        <link rel="preload" href="/images/staking/bg-price.png" as="image" />
+
         {/* Preload Joystix */}
         <link
           rel="preload"

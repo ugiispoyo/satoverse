@@ -18,7 +18,7 @@ const History = (props: Props) => {
         Track your stacking rewards
       </h2>
       <div className="w-full flex gap-3 mt-5 mb-4 max-md:flex-col max-md:items-center">
-        <div className="w-full font-orbitron max-w-[200px] bg-[url('/images/staking/bg-balence.svg')] bg-no-repeat bg-contain min-h-[102px] flex flex-col pl-7 pr-5 py-4 gap-1">
+        <div className="w-full font-orbitron max-w-[200px] bg-[url('/images/staking/bg-balence.png')] bg-no-repeat bg-contain min-h-[102px] flex flex-col pl-7 pr-5 py-4 gap-1">
           <h3 className="text-[12px] text-[#E3DAAC] font-extrabold">
             stETH balance
           </h3>
@@ -29,7 +29,7 @@ const History = (props: Props) => {
             $157,147.7
           </span>
         </div>
-        <div className="w-full font-orbitron max-w-[200px] bg-[url('/images/staking/bg-earned.svg')] bg-no-repeat bg-contain min-h-[102px] flex flex-col pl-7 pr-5 py-4 gap-1">
+        <div className="w-full font-orbitron max-w-[200px] bg-[url('/images/staking/bg-earned.png')] bg-no-repeat bg-contain min-h-[102px] flex flex-col pl-7 pr-5 py-4 gap-1">
           <h3 className="text-[12px] text-[#E3DAAC] font-extrabold">
             stETH earned
           </h3>
@@ -40,7 +40,7 @@ const History = (props: Props) => {
             $157,147.7
           </span>
         </div>
-        <div className="w-full font-orbitron max-w-[200px] bg-[url('/images/staking/bg-apr.svg')] bg-no-repeat bg-contain min-h-[102px] flex flex-col pl-7 pr-5 py-4 gap-1">
+        <div className="w-full font-orbitron max-w-[200px] bg-[url('/images/staking/bg-apr.png')] bg-no-repeat bg-contain min-h-[102px] flex flex-col pl-7 pr-5 py-4 gap-1">
           <h3 className="text-[12px] text-[#E3DAAC] font-extrabold">
             stETH earned
           </h3>
@@ -51,7 +51,7 @@ const History = (props: Props) => {
             </span>
           </Link>
         </div>
-        <div className="w-full font-orbitron max-w-[200px] bg-[url('/images/staking/bg-earned.svg')] bg-no-repeat bg-contain min-h-[102px] flex flex-col pl-7 pr-5 py-4 gap-1">
+        <div className="w-full font-orbitron max-w-[200px] bg-[url('/images/staking/bg-price.png')] bg-no-repeat bg-contain min-h-[102px] flex flex-col pl-7 pr-5 py-4 gap-1">
           <h3 className="text-[12px] text-[#E3DAAC] font-extrabold">
             stETH price
           </h3>
