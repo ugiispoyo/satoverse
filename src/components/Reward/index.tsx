@@ -45,7 +45,7 @@ const Reward = (props: Props) => {
               <div className="w-full max-w-[272px] h-[30px] pl-2">
                 <SakingProgress progressPercent={80} />
               </div>
-              <span className="text-[10px] font-orbitron text-[#C0C0C0] absolute bottom-[-5px] left-0">
+              <span className="text-[6px] font-[900] uppercase font-orbitron text-[#C0C0C0] absolute bottom-[-5px] left-3">
                 *Will decrease Next Stage
               </span>
             </div>
@@ -94,7 +94,7 @@ const Reward = (props: Props) => {
                 World's first Bitcoin Layer 2
               </span>
               <div className="w-full lg:pl-[30px] flex justify-center">
-                <div className="bg-[url('/images/sidebar-reward/bg-countdown.svg')] lg:w-[318px] lg:h-[146px] max-lg:bg-cover w-[310px] h-[142px] relative flex mt-3 flex-col">
+                <div className="lg:mr-4 bg-[url('/images/sidebar-reward/bg-countdown.svg')] lg:w-[318px] lg:h-[146px] max-lg:bg-cover w-[310px] h-[142px] relative flex mt-3 flex-col">
                   <div className="w-full flex gap-3 max-w-[282px] max-h-[70px] mx-auto mt-5 max-lg:justify-between">
                     <div className="flex flex-col justify-between items-center">
                       <span className="text-[#E3DAAC] font-orbitron uppercase font-extrabold text-[12px] block text-center">
@@ -129,7 +129,7 @@ const Reward = (props: Props) => {
                       </span>
                     </div>
                   </div>
-                  <span className="text-gradient-1 font-orbitron uppercase font-extrabold text-[12px] block text-center mt-[20px]">
+                  <span className="text-[#E3DAAC] font-orbitron uppercase font-extrabold text-[12px] block text-center mt-[20px]">
                     Until next price increase
                   </span>
                   <div className="w-full flex justify-center ml-1 lg:mt-2 mt-1">

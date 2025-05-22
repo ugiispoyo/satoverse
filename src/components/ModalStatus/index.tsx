@@ -71,21 +71,22 @@ const ModalStatus: React.FC<ModalProps> = ({ isOpen, onClose, status }) => {
     <div className="fixed inset-0 z-[999] flex items-center justify-center bg-[#000000bd] h-screen w-full">
       <div
         className={clsx(
-          "relative rounded-2xl w-full max-w-[480px] min-h-[293px] transition-all transform max-sm:px-4",
-          status === "loading"
-            ? "justify-center items-center flex"
-            : "bg-[url('/images/bg-modal-connect-wallet.svg')] bg-no-repeat bg-cover bg-center flex justify-center"
+          "relative rounded-2xl transition-all transform w-full max-w-[500px] mx-auto max-sm:px-5"
         )}
       >
         {status === "loading" ? (
           <>
-            <div className="w-16 h-16 border-4 border-t-transparent border-[#b3f487] rounded-full animate-spin"></div>
+            <div className="w-16 h-16 mx-auto border-4 border-t-transparent border-[#b3f487] rounded-full animate-spin"></div>
           </>
         ) : (
-          <>
+          <div
+            className={clsx(
+              "relative max-sm:px-4 bg-[url('/images/bg-modal-status.svg')] w-full sm:min-h-[350px] bg-no-repeat bg-cover max-sm:bg-auto bg-center flex justify-center"
+            )}
+          >
             {/* CLOSE BUTTON */}
             <button
-              className="absolute top-4 right-13 cursor-pointer z-[999]"
+              className="absolute sm:top-5 sm:right-12 top-2 right-9 max-[480px]:right-2 cursor-pointer z-[999]"
               onClick={onClose}
             >
               <img
@@ -95,7 +96,7 @@ const ModalStatus: React.FC<ModalProps> = ({ isOpen, onClose, status }) => {
               />
             </button>
 
-            <div className="flex items-center justify-center flex-col md:py-8 py-4 relative max-sm:px-5">
+            <div className="flex items-center justify-center flex-col md:py-8 py-4 relative">
               {/* WALLET ICON */}
               {renderStatus()}
 
@@ -115,18 +116,18 @@ const ModalStatus: React.FC<ModalProps> = ({ isOpen, onClose, status }) => {
               </span>
 
               {/* BUTTON CLOSE BUTTOM */}
-              <div className="w-full flex max-sm:px-4">
+              <div className="w-full flex">
                 <button
                   onClick={onClose}
-                  className="bg-btn-other-connect-wallet cursor-pointer relative w-full max-w-full flex items-center justify-center mx-auto"
+                  className="bg-btn-other-connect-wallet py-0 max-h-[44px]! cursor-pointer relative w-full max-w-full flex items-center justify-center mx-auto"
                 >
-                  <span className="text-gradient-5 text-sm sm:text-base block text-center w-full font-[900]">
+                  <span className="text-gradient-5 font-orbitron text-sm sm:text-base block text-center w-full font-[900]">
                     CLOSE
                   </span>
                 </button>
               </div>
             </div>
-          </>
+          </div>
         )}
       </div>
     </div>
